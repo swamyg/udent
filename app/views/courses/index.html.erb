@@ -1,0 +1,34 @@
+
+<head>
+	<%= stylesheet_link_tag 'courses' %>
+
+</head>
+<h1>Listing courses</h1>
+
+<table>
+  <tr>
+  	
+    <th>Course name</th>
+    <th>Availability</th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% @course.each do |course| %>
+  <tr>
+    <td><%= course.course_name %></td>
+    <td><%= course.availability %></td>
+    <td><%= course.id %></td>
+    <td><%= link_to 'Details', course %></td>
+    <% if @admin %>
+    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+    <td><%= link_to "Delete", destroy_course_path(course) %></td>
+    <% end %>
+  </tr>
+<% end %>
+
+<% if @admin %>
+    <td><%= link_to "Add new courses", add_course_path %></td>
+    <% end %>
+</table>
+

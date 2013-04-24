@@ -1,0 +1,14 @@
+html { height: 100%; }
+
+body {
+    font-family:  Calibri;
+    background: #ddd url(scu.jpg);
+    background-size: 100%;
+    font-weight: 200;
+    font-size: 20px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 75%;
+}

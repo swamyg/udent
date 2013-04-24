@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>
+			Udent
+			<= stylesheet_link_tag :global, :cache => true>
+		</title>
+		<body>
+			<% if flash[:notice] %>
+				<%= flash[:notice] %>
+			<% end %>
+			<% if flash[:error] %>
+				<%= flash[:error] %>
+			<% end %>
+			<% if flash[:success] %>
+				<%= flash[:success] %>
+			<% end %>
+			<br />
+			<td><%= link_to 'Home', new_session_path %></td
+			<% if @admin %>
+			<td><%= link_to 'Admin Page', index_user_path %></td>
+			<% end %>
+			<br />
+			<td><%= link_to 'List of courses', index_course_path %></td>
+			<% if !@loggedin %>
+			<td><%= link_to 'Login', create_session_path %></td>
+			<td><%= link_to 'Register', create_user_path %></td>
+			<% else %>
+			<% @id = session[:user_id] %>
+			<td><%= link_to 'Profile', show_user_path(@id) %></td>
+			<td><%= link_to 'Logout', logout_session_path %></td>
+			<% end %>
+			
+			<%= yield %>
+			
+			
+		</body>
+	</head>
+</html>
+
+
+
+

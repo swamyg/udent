@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  course_name: MyString
+  course_description: MyString
+  availability: MyString
+  prerequiste: MyString
+
+two:
+  course_name: MyString
+  course_description: MyString
+  availability: MyString
+  prerequiste: MyString

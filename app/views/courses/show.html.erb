@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Course name:</b>
+  <%= @course.course_name %>
+</p>
+
+<p>
+  <b>Course description:</b>
+  <%= @course.course_description %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @course.availability %>
+</p>
+
+<p>
+  <b>Prerequiste:</b>
+  <%= @course.prerequiste %>
+</p>
+
+<% if @admin %>
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<% end %>
+<%= link_to 'Back', index_course_path %>

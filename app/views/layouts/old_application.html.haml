@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title
+      Udent
+    -# = stylesheet_link_tag :global
+    = javascript_include_tag "application"
+ 
+  %body 
+    #flash
+      - if flash[:notice]
+        %h3.info_box
+          = flash[:notice]
+  
+      - if flash[:error]
+        %h3.error_box
+          =flash[:error]
+      
+      - if flash[:success]
+        %h3.error_box
+          =flash[:success]
+
+    = yield

@@ -1,0 +1,122 @@
+html { height: 100%; }
+
+body {
+    font-family:  Calibri;
+    background: #ddd url(scu.jpg);
+    background-size: 100%;
+    font-weight: 200;
+    font-size: 20px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 75%;
+}
+
+.form {
+    /* Size and position */
+    width: 340px;
+    margin: 60px auto 30px;
+    padding: 15px;
+    position: relative;
+
+    /* Styles */
+    background: #FFFFFF;
+    border-radius: 5px;
+    color: #000000;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.2),        
+        0 1px 1px rgba(0,0,0,0.2),        
+        0 0 0 6px rgba(255,255,255,0.4); 
+}
+
+.form-2 .float {
+    width: 50%;
+    float: left;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,1);
+}
+.form label {
+    display: block;
+    padding: 0 0 1px 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    font-size: 15px;
+}
+.form input[type=text],
+.form input[type=password] {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    padding: 4px;
+    margin-bottom: 5px;
+    border: 3px solid #ebe6e2;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.form input[type=text]:hover,
+.form input[type=password]:hover {
+    border-color: #CCC;
+}
+
+.form label:hover ~ input {
+    border-color: #CCC;
+}
+
+.form input[type=text]:focus,
+.form input[type=password]:focus {
+    border-color: #BBB;
+    outline: none; /* Remove Chrome's outline */
+}
+
+.form input[type=submit] {
+    /* Size and position */
+    width: 2   5%;
+    height: 40px;
+    float: left;
+    position: relative;
+
+    /* Styles */
+    box-shadow: inset 0 1px rgba(255,255,255,0.3);
+    border-radius: 3px;
+    cursor: pointer;
+
+    /* Font styles */
+    font-family: Calibri;
+    font-size: 20px;
+    line-height: 40px; /* Same as height */
+    text-align: center;
+    font-weight: bold;
+}
+
+.form input[type=submit] {
+    margin-left: 1%;
+    background: #fB8FFCB; /* Fallback */
+    background: -moz-linear-gradient(#fbd568, #ffb347);
+    background: -ms-linear-gradient(#fbd568, #ffb347);
+    background: -o-linear-gradient(#fbd568, #ffb347);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fbd568), to(#ffb347));
+    background: -webkit-linear-gradient(#fbd568, #ffb347);
+    background: linear-gradient(#fbd568, #ffb347);
+    border: 1px solid #f4ab4c;
+    color: #996319;
+    text-shadow: 0 1px rgba(255,255,255,0.3);
+}
+.form h1 {
+    font-size: 25px;
+	line-height: 30px;
+	margin: 0;
+	position: relative;
+	font-weight: 300;
+	color: #666;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+}
