@@ -1,56 +1,95 @@
-<p id="notice"><%= notice %></p>
 
+	
+<div id="userdetails">
+	<table >
+		<th> Name  </th>
+		<th> Email </th>
+		<th></th>
+		<th></th>
+		<tbody>
+		<td>
+			<%= @user.name %>
+		</td>
+		<td>
+			<%= @user.email %>
+		</td>
+		<td>
+			<%= link_to 'Edit Details', edit_user_path(@user) %>
+		</td>
+		<td>
+			<%= link_to 'Profile Page', user_profile_path(@user) %>
+		</td>
+		</tbody>
+	</table>
+	
+</div>	
+<br />
+<br />
+<br />
+<br />
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-
-<p>
-  <b>Admin:</b>
-  <%= @user.admin %>
-</p>
-
-<p>
-  <b>Professor:</b>
-  <%= @user.professor %>
-</p>
-
-<p>
-	<b>Courses Taken</b>
-<% @courses.each do |course| %>
-<%= course.course_name %>
-
-
-<%= link_to course.course_name, dropcourse_user_path(:course_name => course.course_name ) %>
-<% end %>
-
+	<b> Enrolled:</b>	
 </p>
 
 
+	<table>
+		<th>
+			<b> Course Name</b>
+		</th>
+		<th>
+			<b> Course Description</b>
+		</th>
+		<th>
+			
+		</th>
+		<% @courses.each do |course| %>
+		<tbody>		
+			<td>
+				<%= course.course_name %>
+			</td>
+			<td>
+				<%= course.course_description %>
+			</td>
+			<td>
+				<%= link_to "Drop Class" , dropcourse_user_path(:course_name => course.course_name ) %>
+			</td>
+		</tbody>
+		<% end %>
+	</table>
+	
+<br />
+<br />
+<br />
+<br />
+	
 <p>
-	<b>Add Course</b>
-	<% @allcourses.each do |course| %>
-	<%= link_to course.course_name, addcourse_user_path(:course_name => course.course_name ) %>	
-	<br />
-	<% end %>
-
+	<b> Available for Enrollment</b>	
 </p>
-<p>
-	<b>Courses Available</b>
-<%= link_to "Allcourses" , index_course_path %>
+<table>
+		<th>
+			<b> Course Name</b>
+		</th>
+		<th>
+			<b> Course Description</b>
+		</th>
+		<th>
+			
+		</th>
+		<% (@allcourses-@courses).each do |course| %>
+		<tbody>
+			<td>
+				<%= course.course_name %>
+			</td>
+			<td>
+				<%= course.course_description %>
+			</td>
+			<td>
+				<%= link_to "Add Class" , addcourse_user_path(:course_name => course.course_name ) %>
+			</td>
+		</tbody>
+		<% end %>
+	</table>
 
-</p>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
 
 

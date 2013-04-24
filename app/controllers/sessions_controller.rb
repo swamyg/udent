@@ -1,4 +1,20 @@
 class SessionsController < ApplicationController
+ before_filter :access_level
+ 
+  def access_level
+    if @user = User.find_by_id(session[:user_id])
+      @loggedin = true
+      if @user = User.find_by_id(session[:user_id]).admin 
+        @admin = true
+      else
+        @admin = false
+     end
+    else
+     @loggedin = false 
+    end 
+  end 
+
+ 
   def register
     @user = @user || User.new
   end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
    
    before_filter :access_level
-  
+   
   def access_level
     if @user = User.find_by_id(session[:user_id])
       @loggedin = true
@@ -35,15 +35,12 @@ class UsersController < ApplicationController
     @allcourses = Course.all
     @user = User.find(params[:id])
     @courses = @user.courses.sort
-    if @admin || ( session[:user_id] == @user.id )
+   
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
-    else
-      flash[:error] = "You don't have Admin permission"
-      redirect_to new_session_path 
-    end   
+    
   end
 
   def addcourse
@@ -72,46 +69,41 @@ class UsersController < ApplicationController
   end
   
   def new
-    if @admin
+    
     @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
     end
-   else
-     flash[:error] = "You don't have Admin permission"
-      redirect_to new_session_path  
-  end
+   
   end
   
-  def create
-    if @admin
+  def create 
     @user = User.new(params[:user])
-
+   
+   
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+         session[:user_id] = @user.id
+        @loggedin = true
+        flash[:notice] = " Welcome #{@user.name} Explore more options "
+        format.html { redirect_to @user }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    end
-    else
-       flash[:error] = "You don't have Admin permission"
-      redirect_to new_session_path
-    end  
   end
+  end
+  
+
 
   # GET /users/1/edit
   def edit
-    if @admin
+   
     @user = User.find(params[:id])
-    else
-      flash[:error] = "You don't have Admin permission"
-      redirect_to new_session_path 
-    end  
+     
   end
 
   def delete

@@ -1,10 +1,11 @@
 <html>
 	<head>
-		<title>
-			Udent
-			<= stylesheet_link_tag :global, :cache => true>
+		
+		<title> udent			
 		</title>
-		<body>
+		<%= stylesheet_link_tag 'application' %>
+	</head>		
+	<body>
 			<% if flash[:notice] %>
 				<%= flash[:notice] %>
 			<% end %>
@@ -15,26 +16,31 @@
 				<%= flash[:success] %>
 			<% end %>
 			<br />
-			<td><%= link_to 'Home', new_session_path %></td
-			<% if @admin %>
-			<td><%= link_to 'Admin Page', index_user_path %></td>
-			<% end %>
-			<br />
-			<td><%= link_to 'List of courses', index_course_path %></td>
-			<% if !@loggedin %>
-			<td><%= link_to 'Login', create_session_path %></td>
-			<td><%= link_to 'Register', create_user_path %></td>
-			<% else %>
-			<% @id = session[:user_id] %>
-			<td><%= link_to 'Profile', show_user_path(@id) %></td>
-			<td><%= link_to 'Logout', logout_session_path %></td>
-			<% end %>
-			
+			<nav id="#navbar">
+				<ul>
+					<%= link_to 'Home', new_session_path %>
+				</ul>	
+				<ul>
+					<%= link_to 'List of courses', index_course_path %>
+				</ul>
+					<% if @admin %>
+				<ul>		
+					<%= link_to 'Admin Page', index_user_path %>
+				</ul>
+					<% end %>
+					<% if !@loggedin %>
+				<ul>
+					<%= link_to 'Login', create_session_path %> | <%= link_to 'Register', create_user_path %>
+				</ul>
+					<% else %>
+				<ul>
+					<% @id = session[:user_id] %>
+					<%= link_to 'Profile', show_user_path(@id) %> | <%= link_to 'Logout', logout_session_path %>	
+				</ul>
+					<% end %>					
+			</nav>
 			<%= yield %>
-			
-			
 		</body>
-	</head>
 </html>
 
 

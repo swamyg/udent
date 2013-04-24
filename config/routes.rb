@@ -1,8 +1,5 @@
 Udent::Application.routes.draw do
  
-
-
-
   
   root :to => 'sessions#new'
   
@@ -19,6 +16,7 @@ Udent::Application.routes.draw do
    match 'users/show/:id' => 'users#show' , as: 'show_user'
    match 'users/addcourse/:id' => 'users#addcourse' , as: 'addcourse_user'
    match 'users/dropcourse/:id' => 'users#dropcourse' , as: 'dropcourse_user'
+   match 'users/profile/:id' => 'users#profile' , as: 'user_profile'
    
    # match 'users/profile/:id' => 'users#profile' , as: 'profile_user'
   

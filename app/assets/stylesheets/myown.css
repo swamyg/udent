@@ -1,8 +1,7 @@
 html { height: 100%; }
-
 body {
-    font-family:  Calibri;
-    background: #ddd url(scu.jpg);
+    font-family:  calibri, verdana, arial, helvetica, sans-serif;;
+    background: #ddd url(wood_pattern.jpg);
     background-size: 100%;
     font-weight: 200;
     font-size: 20px;
@@ -12,6 +11,30 @@ body {
     overflow-x: hidden;
     width: 75%;
 }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
 
 .form {
     /* Size and position */
@@ -30,7 +53,7 @@ body {
         0 0 0 6px rgba(255,255,255,0.4); 
 }
 
-.form-2 .float {
+.form .float {
     width: 50%;
     float: left;
     padding-top: 15px;
@@ -68,9 +91,6 @@ body {
     border-color: #CCC;
 }
 
-.form label:hover ~ input {
-    border-color: #CCC;
-}
 
 .form input[type=text]:focus,
 .form input[type=password]:focus {
@@ -100,7 +120,6 @@ body {
 
 .form input[type=submit] {
     margin-left: 1%;
-    background: #fB8FFCB; /* Fallback */
     background: -moz-linear-gradient(#fbd568, #ffb347);
     background: -ms-linear-gradient(#fbd568, #ffb347);
     background: -o-linear-gradient(#fbd568, #ffb347);
@@ -119,4 +138,43 @@ body {
 	font-weight: 300;
 	color: #666;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
 }
