@@ -1,17 +1,18 @@
-body {
-    margin: 30px;
-    padding: 0px;
-    width: 100%;
-    font-family: "Comic Sans MS",Arial, Helvetica, sans-serif;
-    background:#5B5B67;
-    
-}
+body 
+	{
+	    margin: 30px;
+	    padding: 0px;
+	    width: 100%;
+	    font-family: "Comic Sans MS",Arial, Helvetica, sans-serif;
+	    background:#5B5B67;    
+	}
 
 #container
 	{
-		width: 50%;
-		position: absolute; top: 5%; right: 25%; bottom 0%; left: 25%;	
+		width: 60%;
+		position: relative; top: 5%; right: 25%; bottom 0%; left: 25%;	
 	}
+	
 #wrapper
 	{
 		width:50%;
@@ -21,30 +22,148 @@ body {
 		background-color:#CCCCCC
 	}
 
-.button {
+#flashmsg
+	{
+		width: 60%;
+		position: absolute; top: 10%; right: 15%; bottom 0%; left: 25%;
+	}
 
-	    color:#666;
+h1
+	{
+		font-size:30px;
+		margin: 10px 35%;
+	}
+	
+.button 
+	{
 	    background-color:#B1B1B6;
-	    border-radius:5px;
-	    -moz-border-radius:5px;
-	    -webkit-border-radius:5px;
-	    border: 2px;
+	    border: 3px;
+	    border-radius: 10px;
+	    
+	    color: #000000;
 	    font-family: "Comic Sans MS",Arial,sans-serif;
-	    font-size: 15px;
-	    
-	    font-weight:700;
+	    font-size: 20px; 
+	    font-weight:bolder;
+	     
 	    text-decoration:none;
-	    
-	    
-	    /*padding:10px 16px;
-	    text-shadow:#FE6 0 1px 0 */
-		  
-		  /*width: 115px;
-		  height: 30px;*/
-		  
-		  padding: 10px;
-		  text-align: center;
-		  border-radius: 5px;
-		  color: #000000;
-		  font-weight: bold;
+		text-align: center center;
+		padding: 7px;
+		
    }
+   
+.log-in
+	{
+
+		  position: relative;
+		  margin: 80px auto;
+		  width: 55%;
+		  height: 40%;
+		  padding-right: 32px;
+		  font-weight: 300;
+		  color: #000000;
+		  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+	}
+	
+input, button, label 
+	{
+		  font-size: 15px;
+		  font-weight: 300;
+		  -webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	}
+
+input[type=text], input[type=password] 
+	{
+		  padding: 0 10px;
+		  width: 300px;
+		  height: 40px;
+		  color: #000000;
+		  text-shadow: 1px 1px 1px black;
+		  background: rgba(0, 0, 0, 0.16);
+		  border: 0;
+		  border-radius: 5px;
+	
+	}	
+	
+label 
+	{
+		  float: left;
+		  width: 100px;
+		  line-height: 40px;
+		  padding-right: 10px;
+		  font-weight: 100;
+		  font-family: "Comic Sans MS",Arial,sans-serif;
+		  font-size: 18px;
+		  text-align: right;
+		  letter-spacing: 1px;
+		  font-size 20px;
+	}
+
+input[type="submit"]
+	{
+	    background-color:#B1B1B6;
+	    border: 3px;
+	    border-radius: 10px;
+	    margin: 10px 100px;
+	    
+	    color: #000000;
+	    font-family: "Comic Sans MS",Arial,sans-serif;
+	    font-size: 20px; 
+	    font-weight:bolder;
+	     
+	    text-decoration:none;
+		text-align: center center;
+		padding: 7px;
+		
+   }
+.Addbutton
+	{
+		background-color:#B1B1B6;
+	    border: 3px;
+	    border-radius: 10px;
+	    margin: 5% 40%;
+	    color: #000000;
+	    font-family: "Comic Sans MS",Arial,sans-serif;
+	    font-size: 15px; 
+	    font-weight:bolder;
+	     
+	    text-decoration:none;
+		text-align: center center;
+		padding: 7px;
+	} 
+.linkbutton
+	{
+		background-color:#B1B1B6;
+	    border: 3px;
+	    border-radius: 10px;
+	    color: #000000;
+	    font-family: "Comic Sans MS",Arial,sans-serif;
+	    font-size: 12px; 
+	    font-weight:bolder;
+	     
+	    text-decoration:none;
+		text-align: center center;
+		padding: 3px;
+	}   
+table 
+	{
+		width:75%;
+		margin: 5% 12.5%
+	}
+th
+	{
+		font-size: 15px;
+		font-weight:bold;
+		height:50px;
+		
+		text-decoration:none;
+		text-align: center center;
+		padding: 2px;
+	}   
+td
+	{
+		font-size: 14px;
+		text-align: center;
+		padding: 2px;
+	}	

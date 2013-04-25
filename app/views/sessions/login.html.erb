@@ -1,10 +1,13 @@
-
-<%= form_tag  validate_login_path do %>
-
-  <%= label_tag :email , "Email" %>
-  <%= text_field_tag :email %>
-  <br />
-  <%= label_tag :password , "Password" %>
-  <%= text_field_tag :password %>
-	<%= submit_tag "Login" %>
-<% end %>
+<div class="log-in">
+	<%= form_tag  validate_login_path do %>
+	  <%= label_tag :email , "Email" %>
+	  <%= text_field_tag :email %>
+	  <br />
+	  <br />
+	  <%= label_tag :password , "Password" %>
+	  <%= text_field_tag :password %>
+	  <br />
+	   <br />
+	  <%= submit_tag "Login" %>
+	<% end %>
+</div>

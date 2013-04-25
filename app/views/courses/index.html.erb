@@ -19,16 +19,17 @@
   <tr>
     <td><%= course.course_name %></td>
     <td><%= course.availability %></td>
-    <td><%= link_to 'Details', course %></td>
+    <td><%= link_to 'Details', course , html_options = { :class => "linkbutton" } %></td>
     <% if @admin %>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to "Delete", destroy_course_path(course) %></td>
+    <td><%= link_to 'Edit', edit_course_path(course) , html_options = { :class => "linkbutton" }%></td>
+    <td><%= link_to "Delete", destroy_course_path(course) , html_options = { :class => "linkbutton" }%></td>
     <% end %>
   </tr>
 <% end %>
 
-<% if @admin %>
-    <td><%= link_to "Add new courses", add_course_path %></td>
-    <% end %>
+
 </table>
+	<% if @admin %>
+   	<%= link_to "Add new courses", add_course_path , html_options = { :class => "Addbutton" } %>
+    <% end %>
 

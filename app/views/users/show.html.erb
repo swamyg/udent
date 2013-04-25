@@ -1,94 +1,67 @@
-
-	
-<div id="navbar">
-	<table >
-		<th> Name  </th>
-		<th> Email </th>
-		<th></th>
-		<th></th>
-		<tbody>
-		<td>
-			<%= @user.name %>
-		</td>
-		<td>
-			<%= @user.email %>
-		</td>
-		<td>
-			<%= link_to 'Edit Details', edit_user_path(@user) %>
-		</td>
-		<td>
-			<%= link_to 'Profile Page', user_profile_path(@user) %>
-		</td>
-		</tbody>
-	</table>
-	
-</div>	
-<br />
-<br />
-<br />
-<br />
-<p>
-	<b> Enrolled:</b>	
-</p>
-
-
-	<table>
-		<th>
-			<b> Course Name</b>
-		</th>
-		<th>
-			<b> Course Description</b>
-		</th>
-		<th>
-			
-		</th>
-		<% @courses.each do |course| %>
-		<tbody>		
-			<td>
-				<%= course.course_name %>
-			</td>
-			<td>
-				<%= course.course_description %>
-			</td>
-			<td>
-				<%= link_to "Drop Class" , dropcourse_user_path(:course_name => course.course_name ) %>
-			</td>
-		</tbody>
-		<% end %>
-	</table>
-	
-<br />
-<br />
-<br />
-<br />
-	
-<p>
-	<b> Available for Enrollment</b>	
-</p>
+<table >
+	<th> Name  </th>
+	<th> Email </th>
+	<tbody>
+	<td>
+		<%= @user.name %>
+	</td>
+	<td>
+		<%= @user.email %>
+	</td>
+	<td>
+		<%= link_to 'Edit Details', edit_user_path(@user) , html_options = { :class => "linkbutton" } %>
+	</td>
+	<td>
+		<%= link_to 'Profile Page', user_profile_path(@user) , html_options = { :class => "linkbutton" } %>
+	</td>
+	</tbody>
+</table>
+<h1>Enrolled Courses</h1>
 <table>
-		<th>
-			<b> Course Name</b>
-		</th>
-		<th>
-			<b> Course Description</b>
-		</th>
-		<th>
-			
-		</th>
-		<% (@allcourses-@courses).each do |course| %>
-		<tbody>
-			<td>
-				<%= course.course_name %>
-			</td>
-			<td>
-				<%= course.course_description %>
-			</td>
-			<td>
-				<%= link_to "Add Class" , addcourse_user_path(:course_name => course.course_name ) %>
-			</td>
-		</tbody>
-		<% end %>
-	</table>
+	<th>
+		Course Name
+	</th>
+	<th>
+		Course Description
+	</th>
+	<% @courses.each do |course| %>
+	<tbody>		
+		<td>
+			<%= course.course_name %>
+		</td>
+		<td>
+			<%= course.course_description %>
+		</td>
+		<td>
+			<%= link_to "Drop Class" , dropcourse_user_path(:course_name => course.course_name ) , html_options = { :class => "linkbutton" }  %>
+		</td>
+	</tbody>
+	<% end %>
+</table>
+<h1>
+	Available Courses
+</h1>
+<table>
+	<th>
+		Course Name
+	</th>
+	<th>
+		Course Description
+	</th>
+	<% (@allcourses-@courses).each do |course| %>
+	<tbody>
+		<td>
+			<%= course.course_name %>
+		</td>
+		<td>
+			<%= course.course_description %>
+		</td>
+		<td>
+			<%= link_to "Add Class" , addcourse_user_path(:course_name => course.course_name ) , html_options = { :class => "linkbutton" } %>
+		</td>
+	</tbody>
+	<% end %>
+</table>
 
 
 
