@@ -1,13 +1,16 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 30px;
+    padding: 0px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(wood_pattern.jpg);
+    background:#5B5B67;
+    /*background-image: url(wood_pattern.jpg);
+    background-position: center center;*/
 }
-#pagewrapper {
+/*#pagewrapper {
     width: 900px;
     margin: 10px auto;
-    padding: 0;
+    padding: 0px;
     border: 1px solid #999;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,8 +19,8 @@ body {
 }
 #header {
     background-color: #900;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 #header p {
     padding: 20px 10px;
@@ -40,16 +43,15 @@ body {
     font-size: 12px;
     color: white;
     font-weight:bold;
-    margin: 0;
+    margin: 0px;
     padding: 2px;
-}
-
+}*/
 /* Navigation Bar */
 
-#navbar ul {
-    padding: 0;
-    margin: 0;
-    background-color: #333;
+/*#navbar ul {
+    padding: 0px;
+    margin: 0px;
+    background-color: #999;
     color: White;
     float: left;
     width: 100%;
@@ -57,7 +59,38 @@ body {
     font-weight: bold;
     font-size: 13px;
     border-bottom: 2px solid #333;
-}
+}*/
+div#container{width:600px;margin:2 auto;}
+div#wrapper{width:600px;margin:2 auto;}
+
+.button {
+	    /*-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;*/
+	    color:#666;
+	    background-color:#B1B1B6;
+	    border-radius:5px;
+	    -moz-border-radius:5px;
+	    -webkit-border-radius:5px;
+	    border: 2px;
+	    font-family:'Helvetica Neue',Arial,sans-serif;
+	    font-size: 15px;
+	    font-weight:700;
+	    text-decoration:none;
+	    
+	    /*padding:10px 16px;
+	    text-shadow:#FE6 0 1px 0 */
+		  
+		  /*width: 115px;
+		  height: 30px;*/
+		  
+		  padding: 10px;
+		  text-align: center;
+		  border-radius: 5px;
+		  color: white;
+		  font-weight: bold;
+   }
+
 #navbar ul li { 
     display: inline;
     color: White;

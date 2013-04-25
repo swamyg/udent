@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         format.json { render json: @users }
       end
     else
-      flash[:error] = "You don't have Admin permission"
+      flash[:error] = "Hello #{@user.name}, you don't have Admin permission"
       redirect_to new_session_path 
     end  
   end
@@ -87,7 +87,7 @@ class UsersController < ApplicationController
       if @user.save
          session[:user_id] = @user.id
         @loggedin = true
-        flash[:notice] = " Welcome #{@user.name} Explore more options "
+        flash[:notice] = " Welcome #{@user.name}, Now you Start adding courses "
         format.html { redirect_to @user }
         format.json { render json: @user, status: :created, location: @user }
       else
@@ -116,7 +116,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
    end
    else
-      flash[:error] = "You don't have Admin permission"
+      flash[:error] = "Hello #{@user.name}, you don't have Admin permission"
       redirect_to new_session_path
    end  
   end

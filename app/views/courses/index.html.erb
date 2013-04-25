@@ -2,9 +2,10 @@
 <head>
 	
 
-</head>
-<h1>Listing courses</h1>
-
+</head> 
+<h1>
+	<%= "Courses Available" %>
+</h1>	 
 <table>
   <tr>
   	
@@ -18,7 +19,6 @@
   <tr>
     <td><%= course.course_name %></td>
     <td><%= course.availability %></td>
-    <td><%= course.id %></td>
     <td><%= link_to 'Details', course %></td>
     <% if @admin %>
     <td><%= link_to 'Edit', edit_course_path(course) %></td>
