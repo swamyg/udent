@@ -2,81 +2,39 @@ body {
     margin: 30px;
     padding: 0px;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Comic Sans MS",Arial, Helvetica, sans-serif;
     background:#5B5B67;
-    /*background-image: url(wood_pattern.jpg);
-    background-position: center center;*/
+    
 }
-/*#pagewrapper {
-    width: 900px;
-    margin: 10px auto;
-    padding: 0px;
-    border: 1px solid #999;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#content {
-    padding: 20px 10px;
-}
-#header {
-    background-color: #900;
-    margin: 0px;
-    padding: 0px;
-}
-#header p {
-    padding: 20px 10px;
-    font-size: 24px;
-    margin: 0;
-    color: white;
-    font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#footer {
-    background-color: #999;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    clear:both;
-    border-top: 2px solid #333;
-    text-align: center;
-}
-#footer p, #footer a {
-    text-align: center;
-    font-size: 12px;
-    color: white;
-    font-weight:bold;
-    margin: 0px;
-    padding: 2px;
-}*/
-/* Navigation Bar */
 
-/*#navbar ul {
-    padding: 0px;
-    margin: 0px;
-    background-color: #999;
-    color: White;
-    float: left;
-    width: 100%;
-    list-style: none;
-    font-weight: bold;
-    font-size: 13px;
-    border-bottom: 2px solid #333;
-}*/
-div#container{width:600px;margin:2 auto;}
-div#wrapper{width:600px;margin:2 auto;}
+#container
+	{
+		width: 50%;
+		position: absolute; top: 5%; right: 25%; bottom 0%; left: 25%;	
+	}
+#wrapper
+	{
+		width:50%;
+		height: 100%;	
+		position: absolute; top: 0%; right: 25%; bottom 0%; left: 25%;
+		auto;
+		background-color:#CCCCCC
+	}
 
 .button {
-	    /*-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
-	    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;*/
+
 	    color:#666;
 	    background-color:#B1B1B6;
 	    border-radius:5px;
 	    -moz-border-radius:5px;
 	    -webkit-border-radius:5px;
 	    border: 2px;
-	    font-family:'Helvetica Neue',Arial,sans-serif;
+	    font-family: "Comic Sans MS",Arial,sans-serif;
 	    font-size: 15px;
+	    
 	    font-weight:700;
 	    text-decoration:none;
+	    
 	    
 	    /*padding:10px 16px;
 	    text-shadow:#FE6 0 1px 0 */
@@ -87,25 +45,6 @@ div#wrapper{width:600px;margin:2 auto;}
 		  padding: 10px;
 		  text-align: center;
 		  border-radius: 5px;
-		  color: white;
+		  color: #000000;
 		  font-weight: bold;
    }
-
-#navbar ul li { 
-    display: inline;
-    color: White;
-    float: left;
-    border-right: 1px solid #333;
-    font-family: arial, helvetica, sans-serif;
-}
-#navbar ul li a {
-    padding: 0.2em 0.7em;
-    background-color: #999; 
-    color: White;
-    text-decoration: none;
-    float:left;
-}
-#navbar ul li a:hover {
-    background-color: #333;
-    color: #fff;
-}

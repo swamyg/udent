@@ -7,14 +7,12 @@
 		<%= stylesheet_link_tag 'application' %>
 	</head>		
 	<body>
-		
 			<br />
-			
 				<div id="container">					
-					<%= link_to 'Home', new_session_path ,  html_options = { :class => "button" }  %>	
-					<%= link_to 'Courses' , index_course_path , html_options = { :class => "button" } %>		
+					<%= link_to 'HOME', new_session_path ,  html_options = { :class => "button" }  %>	
+					<%= link_to 'COURSES' , index_course_path , html_options = { :class => "button" } %>		
 					<% if @admin %>
-					<%= link_to 'Admin Page', index_user_path ,  html_options = { :class => "button" }   %>
+					<%= link_to 'User Admin', index_user_path ,  html_options = { :class => "button" }   %>
 					<% end %>
 					<% if !@loggedin %>
 					<%= link_to 'Login', create_session_path ,  html_options = { :class => "button" } %> 
@@ -25,8 +23,6 @@
 					<%= link_to 'Logout', logout_session_path ,  html_options = { :class => "button" } %>	
 					<% end %>
 				</div>	
-				
-		
 			<br />
 			<br />
 			<% if flash[:notice] %>
